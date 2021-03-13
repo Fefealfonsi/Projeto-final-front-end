@@ -6,7 +6,6 @@ import LoggedContext from './context/LoggedContext'
 import { BrowserRouter} from "react-router-dom"
 import './App.css'
 
-
 const AppContainer=styled.div`
 bottom: 0px;
 margin:0px;
@@ -38,3 +37,4 @@ function App() {
 }
 
 export default App;
+
