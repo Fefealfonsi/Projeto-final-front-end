@@ -10,17 +10,12 @@ function ImageCard(props) {
     return (
         <CardContainer >
             <ImageContainer>
-
                 <Image src={props.file} alt={'logotipo'} onClick={() => goToDetail(history, props.id)} />
-              
-
             </ImageContainer>
+            
             <p>{props.subtitle}</p>
             
         </CardContainer>
-
-
     );
 }
-
 export default ImageCard;

@@ -5,7 +5,7 @@ export const ImageContainer = styled.div`
    justify-content:center;
    flex-wrap:wrap;
    width:100vw;
-   background-color:#e6e4da;
+   /* background-color:#e6e4da; */
    align-items: center;
 `
 export const FeedContainer = styled.div`
@@ -31,13 +31,13 @@ export const CreateButton  = styled.div`
     font-family: 'Lobster', cursive;
    }
 
-  img{
+  /* img{
       width:80px;
       margin-left: 40px;
       ::hover{
         cursor: pointer;
-      }
-  }
+      } */
+  /* } */
    
 `
 export const Loading = styled.div`

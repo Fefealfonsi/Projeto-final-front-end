@@ -3,7 +3,7 @@ import {useForm} from "../../hooks/useForm"
 import { useHistory } from 'react-router-dom'
 import {signup} from "../../services/user"
 import {useUnProtectedPage} from '../../hooks/useUnProtectedPage'
-import {SignupPageContainer,FormContainer,TextFieldStyled,ButtonEffect, Title,LogoContainer} from './styled'
+import {SignupPageContainer,FormContainer,TextFieldStyled,ButtonEffect, Title} from './styled'
 
 function SignupPage() {
 

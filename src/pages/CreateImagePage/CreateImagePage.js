@@ -33,7 +33,7 @@ function CreateImagePage() {
       console.log("Value:", event.target.value.split(","), "Name:", name)
     }
 
-    const [data,getImage] = useRequestData(`${BASE_URL}/image/getImage`, undefined)
+    const [getImage] = useRequestData(`${BASE_URL}/image/getImage`, undefined)
 
      const handleSubmission = (event) => {
       event.preventDefault()
