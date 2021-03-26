@@ -6,21 +6,18 @@ import { ImageContainer, DetailContainer } from "./styled";
 import { useParams } from "react-router-dom";
 
 function DetailImagePage() {
-  const { id } = useParams();
-
   useProtectedPage();
+
+  const { id } = useParams();
 
   const BASE_URL = "https://pinterpets.herokuapp.com";
 
-  const [data] = useRequestData(`${BASE_URL}/image/getImage/${id}`, undefined);
-
-  console.log("DataDetail", data);
-
-  console.log("ID", id);
+  const [data, getData] = useRequestData(
+    `${BASE_URL}/image/getImage/${id}`,
+    undefined
+  );
 
   const image = data && data.result;
-
-  console.log("Image", image);
 
   return (
     <DetailContainer>
@@ -28,14 +25,17 @@ function DetailImagePage() {
         <div>
           <h2>Detalhes da imagem de {image && image.result.nickname} </h2>
         </div>
-        {image && 
-        <DetailCard
-          subtitle={image.result.subtitle}
-          file={image.result.file}
-          date={image.result.date}
-          collection={image.result.collection}
-          tags={image.result.tags}
-        />}
+        {image && (
+          <DetailCard
+            subtitle={image.result.subtitle}
+            file={image.result.file}
+            date={image.result.date}
+            collection={image.result.collection}
+            tags={image.result.tags}
+            id={id}
+            getData={getData}
+          />
+        )}
       </ImageContainer>
     </DetailContainer>
   );

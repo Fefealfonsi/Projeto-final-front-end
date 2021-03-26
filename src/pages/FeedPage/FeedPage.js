@@ -7,7 +7,7 @@ import {
   FeedContainer,
   CreateButton,
   ImageCreate,
-//   Loading,
+  Loading,
 } from "./styled";
 import fotografia from "../../img/fotografia.png";
 import { goToCreate } from "../../router/cordinator";
@@ -42,7 +42,7 @@ function FeedPage() {
       </CreateButton>
 
       <ImageContainer>
-        {data &&
+        {data?
           data.result.map((image) => {
             return (
               <ImageCard
@@ -52,7 +52,10 @@ function FeedPage() {
                 file={image.file}
               />
             );
-          })}
+          }):<Loading>
+            <div></div>
+            
+          </Loading>}
       </ImageContainer>
     </FeedContainer>
   );

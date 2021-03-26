@@ -25,3 +25,16 @@ export const DetailContainer = styled.div`
        color:white;
    }
 `
+export const DeleteButton = styled.button`
+     border-radius: 50px;
+     border:none;
+     padding: 5px;
+     width:25px;
+     margin:20px;
+     background-color: red;
+
+     :hover{
+        background-color:tomato; 
+        cursor: pointer;
+    }
+`
