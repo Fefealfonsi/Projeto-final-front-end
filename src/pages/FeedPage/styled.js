@@ -11,6 +11,7 @@ export const ImageContainer = styled.div`
 export const FeedContainer = styled.div`
    display:flex;
   flex-direction:column;
+  height: 100vh
 `
 export const ImageCreate = styled.img`
    
@@ -41,37 +42,41 @@ export const CreateButton  = styled.div`
    
 `
 export const Loading = styled.div`
-.balls {
-  width: 3.5em;
+
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.balls div {
-  width: 0.8em;
-  height: 0.8em;
+  width: 3.5em;
+  height: 3.5em;
+  border: 3px solid transparent;
+  border-top-color: #880b0b;
+  border-bottom-color: #880b0b;
   border-radius: 50%;
-  background-color: #fc2f70;
-  transform: translateY(-100%);
-  animation: wave 0.8s ease-in-out alternate infinite;
+  animation: spin 1.5s linear infinite;
+  margin-top: 200px;
+
+
+:before {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 0.75em;
+  height: 0.75em;
+  border: 3px solid #880b0b;
+  border-radius: 50%;
+  animation: pulse 1s alternate ease-in-out infinite;
 }
 
-.balls div:nth-of-type(1) {
-  animation-delay: -0.4s;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.balls div:nth-of-type(2) {
-  animation-delay: -0.2s;
-}
-
-@keyframes wave {
+@keyframes pulse {
   from {
-    transform: translateY(-100%);
+    transform: scale(0.5);
   }
   to {
-    transform: translateY(100%);
+    transform: scale(1);
   }
 }
 `
