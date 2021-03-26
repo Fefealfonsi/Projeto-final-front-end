@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import {TextField} from '@material-ui/core'
+import {TextField, Checkbox } from '@material-ui/core'
+
 
 export const CreatePostContainer = styled.div`
     display: flex;

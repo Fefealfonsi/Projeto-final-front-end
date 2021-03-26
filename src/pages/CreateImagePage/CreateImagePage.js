@@ -2,7 +2,6 @@ import React from "react";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import { useForm } from "../../hooks/useForm";
 import { createImage } from "../../services/image";
-import { useRequestData } from "../../hooks/useRequestData";
 import {
   CreatePostContainer,
   FormContainer,
@@ -18,7 +17,6 @@ function CreateImagePage() {
 
   const history = useHistory();
 
-  const BASE_URL = "https://pinterpets.herokuapp.com";
 
   const { form, onChange, resetForm } = useForm({
     subtitle: "",
@@ -40,7 +38,6 @@ function CreateImagePage() {
     console.log("Value:", event.target.value.split(","), "Name:", name);
   };
 
-  const [getImage] = useRequestData(`${BASE_URL}/image/getImage`, undefined);
 
   const handleSubmission = (event) => {
     event.preventDefault();
@@ -70,7 +67,7 @@ function CreateImagePage() {
           <TextFieldStyled
             label="URL"
             // type="file"
-            // accept="application/jpg"
+            // accept="application/pdf"
             variant="outlined"
             name="file"
             value={form.file}
